@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @statistic.date %>
+</p>
+
+<p>
+  <strong>Total infected:</strong>
+  <%= @statistic.total_infected %>
+</p>
+
+<p>
+  <strong>Daily infected:</strong>
+  <%= @statistic.daily_infected %>
+</p>
+
+<p>
+  <strong>Total died:</strong>
+  <%= @statistic.total_died %>
+</p>
+
+<p>
+  <strong>Daily died:</strong>
+  <%= @statistic.daily_died %>
+</p>
+
+<p>
+  <strong>Intubated:</strong>
+  <%= @statistic.intubated %>
+</p>
+
+<p>
+  <strong>Intensive care:</strong>
+  <%= @statistic.intensive_care %>
+</p>
+
+<p>
+  <strong>Total test:</strong>
+  <%= @statistic.total_test %>
+</p>
+
+<p>
+  <strong>Daily test:</strong>
+  <%= @statistic.daily_test %>
+</p>
+
+<p>
+  <strong>Total recovered:</strong>
+  <%= @statistic.total_recovered %>
+</p>
+
+<p>
+  <strong>Daily recovered:</strong>
+  <%= @statistic.daily_recovered %>
+</p>
+
+<%= link_to 'Edit', edit_statistic_path(@statistic) %> |
+<%= link_to 'Back', statistics_path %>

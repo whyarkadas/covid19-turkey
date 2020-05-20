@@ -1,0 +1,72 @@
+<%= form_with(model: statistic, local: true) do |form| %>
+  <% if statistic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(statistic.errors.count, "error") %> prohibited this statistic from being saved:</h2>
+
+      <ul>
+      <% statistic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_infected %>
+    <%= form.number_field :total_infected %>
+  </div>
+
+  <div class="field">
+    <%= form.label :daily_infected %>
+    <%= form.number_field :daily_infected %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_died %>
+    <%= form.number_field :total_died %>
+  </div>
+
+  <div class="field">
+    <%= form.label :daily_died %>
+    <%= form.number_field :daily_died %>
+  </div>
+
+  <div class="field">
+    <%= form.label :intubated %>
+    <%= form.number_field :intubated %>
+  </div>
+
+  <div class="field">
+    <%= form.label :intensive_care %>
+    <%= form.number_field :intensive_care %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_test %>
+    <%= form.number_field :total_test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :daily_test %>
+    <%= form.number_field :daily_test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_recovered %>
+    <%= form.number_field :total_recovered %>
+  </div>
+
+  <div class="field">
+    <%= form.label :daily_recovered %>
+    <%= form.number_field :daily_recovered %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
